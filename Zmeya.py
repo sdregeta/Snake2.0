@@ -5,7 +5,6 @@ import random
 w = 800
 h = 600
 size = 20
-lenght = 3
 root = Tk()
 root.title("Zmeyka")
 root.resizable(False, False)
@@ -15,7 +14,7 @@ class Snake:
     """Класс базы змеи."""
     def __init__(self):
         """На выходе функция выдаёт массив квадратов змеи."""
-        self.lenght = lenght
+        self.lenght = 1
         self.coord = [[100, 100]] 
         self.squares = []
         square = c.create_rectangle(100, 100, 100 + size, 100 + size, fill = "blue")
