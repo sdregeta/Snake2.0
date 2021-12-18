@@ -58,13 +58,13 @@ def move (snake, food):
         lscore.config(text = "Score: {}".format(score))
         c.delete("food")
         food = Food()
-    """Убираем лишний сегмент змеи"""
     else:
         x, y = snake.coord[-1]
         square = c.create_rectangle(x, y, x + size, y + size, fill = "black")
         del snake.coord[-1]
         c.delete(snake.squares[-1])
         del snake.squares[-1]
+        
     if (check(snake)):
         game_over()
     else:
