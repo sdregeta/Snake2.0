@@ -65,7 +65,7 @@ def move (snake, food):
         del snake.squares[-1]
         
     if (check(snake)):
-        game_over()
+        end()
     else:
         root.after(100, move, snake, food)
 
@@ -99,7 +99,7 @@ def check(snake):
             return True
 
 
-def game_over():
+def end():
     """При окончании игры. На выходе убирает все элементы с поля и выводит надпись об окончании игры."""
     c.delete(ALL)
     c.create_text(400, 300, font = ('Arial', 15), text = "Game over", fill = "red")
