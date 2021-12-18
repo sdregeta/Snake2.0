@@ -1,6 +1,7 @@
 from tkinter import *
 import random
 
+"""Константы"""
 w = 800
 h = 600
 size = 20
@@ -12,14 +13,14 @@ window.resizable(False, False)
 
 
 class Snake:
+    
     def __init__(self):
         self.lenght = lenght
-        self.coord = [[100, 100]] * 3
+        self.coord = [[100, 100]] 
         self.squares = []
 
-        for x,y in self.coord:
-            square = c.create_rectangle(x, y, x + size, y + size, fill = "blue")
-            self.squares.append(square)
+        square = c.create_rectangle(100, 100, 100 + size, 100 + size, fill = "blue")
+        self.squares.append(square)
 
 
 class Food:
@@ -131,3 +132,4 @@ food = Food()
 move(snake, food)
 
 window.mainloop()
+
