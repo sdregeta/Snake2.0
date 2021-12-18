@@ -106,7 +106,7 @@ def game_over():
     
     
 score = 0
-direction = "down"
+direction = "right"
 lscore = Label(root, text = "Score: {}".format(score), font = ('Arial', 40))
 lscore.pack()
 c = Canvas(root, height = h, width = w, bg = "black")
